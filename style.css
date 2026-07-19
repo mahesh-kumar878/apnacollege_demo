@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -13,9 +14,9 @@ body{
 
 header{
     background:#1e293b;
-    padding:15px 8%;
     position:sticky;
     top:0;
+    padding:15px 8%;
 }
 
 nav{
@@ -38,8 +39,9 @@ nav ul li{
 }
 
 nav ul li a{
-    text-decoration:none;
     color:white;
+    text-decoration:none;
+    transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -47,24 +49,19 @@ nav ul li a:hover{
 }
 
 .hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:80px 8%;
-    flex-wrap:wrap;
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(135deg,#1e3a8a,#0f172a);
 }
 
-.hero-text{
-    flex:1;
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
 }
 
-.hero-text h1{
-    font-size:45px;
-}
-
-.hero-text p{
-    margin:20px 0;
-    font-size:18px;
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
 }
 
 .btn{
@@ -74,13 +71,12 @@ nav ul li a:hover{
     color:white;
     text-decoration:none;
     border-radius:8px;
+    transition:.3s;
 }
 
 .btn:hover{
     background:#0284c7;
 }
-
-
 
 section{
     padding:70px 8%;
@@ -88,34 +84,34 @@ section{
 
 h2{
     text-align:center;
-    margin-bottom:30px;
     color:#38bdf8;
+    margin-bottom:30px;
 }
 
-.about-content{
-    display:flex;
-    gap:30px;
-    align-items:center;
-    flex-wrap:wrap;
+#about p{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
 }
 
-
-
-.skill-box,
-.project-container{
+.cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
-.card,
-.project-card{
+.card{
     background:#1e293b;
-    padding:20px;
-    text-align:center;
+    padding:30px;
     border-radius:12px;
+    text-align:center;
+    transition:.3s;
 }
 
+.card:hover{
+    transform:translateY(-8px);
+}
 
 form{
     max-width:600px;
@@ -129,6 +125,12 @@ form textarea{
     margin:10px 0;
     border:none;
     border-radius:8px;
+    outline:none;
+}
+
+form textarea{
+    height:120px;
+    resize:none;
 }
 
 form button{
@@ -154,27 +156,27 @@ footer{
 
 @media(max-width:768px){
 
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero-image img{
-    margin-top:30px;
-    width:250px;
-}
-
-.about-content{
-    flex-direction:column;
-}
-
 nav{
     flex-direction:column;
 }
 
 nav ul{
-    margin-top:10px;
-    flex-wrap:wrap;
-    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    margin-top:15px;
 }
+
+nav ul li{
+    margin:10px 0;
 }
+
+.hero h1{
+    font-size:35px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+}
+

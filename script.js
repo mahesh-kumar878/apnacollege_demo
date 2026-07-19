@@ -1,4 +1,4 @@
-// Smooth Scroll for Navigation
+// Smooth Scrolling
 
 document.querySelectorAll("nav a").forEach(link => {
 
@@ -24,13 +24,13 @@ form.addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    alert("Thank you! Your message has been sent.");
+    alert("Thank you! Your message has been sent successfully.");
 
     form.reset();
 
 });
 
-// Navbar Shadow on Scroll
+// Navbar Shadow
 
 window.addEventListener("scroll", function(){
 
@@ -48,9 +48,17 @@ window.addEventListener("scroll", function(){
 
 });
 
-// Reveal Animation
+// Section Animation
 
 const sections = document.querySelectorAll("section");
+
+sections.forEach(section => {
+
+    section.style.opacity = "0";
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "0.6s";
+
+});
 
 window.addEventListener("scroll", () => {
 
@@ -69,24 +77,16 @@ window.addEventListener("scroll", () => {
 
 });
 
-// Initial Style
-
-sections.forEach(section => {
-
-    section.style.opacity = "0";
-    section.style.transform = "translateY(40px)";
-    section.style.transition = "0.6s";
-
-});
-
 // Hero Button
 
-const contactBtn = document.querySelector(".btn");
+document.querySelector(".btn").addEventListener("click", function(e){
 
-contactBtn.addEventListener("click", () => {
+    e.preventDefault();
 
     document.querySelector("#contact").scrollIntoView({
-        behavior: "smooth"
+
+        behavior:"smooth"
+
     });
 
 });
