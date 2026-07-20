@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<nav>
+<h2>ShopEasy</h2>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="cart.html">Cart (<span id="count">0</span>)</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section class="products">
+
+<div class="product">
+
+<img src="images/product1.jpg" alt="Laptop">
+
+<h3>Laptop</h3>
+
+<p>₹50000</p>
+
+<button onclick="addToCart('Laptop',50000)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="product">
+
+<img src="images/product2.jpg" alt="Headphone">
+
+<h3>Headphone</h3>
+
+<p>₹2000</p>
+
+<button onclick="addToCart('Headphone',2000)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="product">
+
+<img src="images/product3.jpg" alt="Smart Watch">
+
+<h3>Smart Watch</h3>
+
+<p>₹3500</p>
+
+<button onclick="addToCart('Smart Watch',3500)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="product">
+
+<img src="images/product4.jpg" alt="Mobile">
+
+<h3>Mobile</h3>
+
+<p>₹18000</p>
+
+<button onclick="addToCart('Mobile',18000)">
+Add to Cart
+</button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

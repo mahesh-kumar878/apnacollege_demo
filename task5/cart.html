@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<nav>
+
+<h2>ShopEasy</h2>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="cart.html">Cart (<span id="count">0</span>)</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section class="cart">
+
+<h1>Your Shopping Cart</h1>
+
+<div id="cartItems"></div>
+
+<h2 id="total">Total: ₹0</h2>
+
+<button onclick="clearCart()">Clear Cart</button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
