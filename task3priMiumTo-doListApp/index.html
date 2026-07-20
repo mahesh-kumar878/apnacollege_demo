@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Premium To-Do App</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>📝 Premium To-Do List</h1>
+
+<p>Organize Your Daily Tasks</p>
+
+</header>
+
+<main>
+
+<section class="todo-container">
+
+<div class="input-box">
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter a new task">
+
+<button id="addTask">
+
+Add Task
+
+</button>
+
+</div>
+
+<div class="filter-buttons">
+
+<button id="allBtn">All</button>
+
+<button id="activeBtn">Active</button>
+
+<button id="completedBtn">Completed</button>
+
+</div>
+
+<div id="taskList">
+
+<!-- Tasks will appear here -->
+
+</div>
+
+<div class="task-footer">
+
+<h3>
+
+Total Tasks :
+
+<span id="taskCount">
+
+0
+
+</span>
+
+</h3>
+
+</div>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

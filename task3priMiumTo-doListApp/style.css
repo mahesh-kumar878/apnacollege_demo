@@ -1,0 +1,447 @@
+/* ===========================
+   Premium To-Do App
+   Part 1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+header{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+header h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+header p{
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+}
+
+.todo-container{
+
+    width:90%;
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+.input-box{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.input-box button{
+
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-box button:hover{
+
+    background:#2563eb;
+
+}
+
+/* ===========================
+   PART 2 - TO-DO APP
+=========================== */
+
+.todo-container{
+    max-width:800px;
+    margin:50px auto;
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.todo-container h2{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+.input-box{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.input-box input{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:#fff;
+    font-size:16px;
+}
+
+.input-box input::placeholder{
+    color:#cbd5e1;
+}
+
+.input-box button{
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    background:#0ea5e9;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.input-box button:hover{
+    background:#0284c7;
+    transform:scale(1.05);
+}
+
+#task-list{
+    list-style:none;
+    padding:0;
+}
+
+#task-list li{
+    background:#334155;
+    color:#fff;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.3s;
+}
+
+#task-list li:hover{
+    transform:translateY(-3px);
+}
+
+.completed{
+    text-decoration:line-through;
+    color:#94a3b8;
+}
+
+.task-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.task-buttons button{
+    width: 80px;
+    height: 35px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    color:white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.task-buttons button:nth-child(1){
+    background:#22c55e;
+}
+
+.task-buttons button:nth-child(2){
+    background:#f59e0b;
+}
+
+.task-buttons button:nth-child(3){
+    background:#ef4444;
+}
+
+
+.complete-btn{
+    background:#22c55e;
+}
+
+.delete-btn{
+    background:#ef4444;
+}
+
+.complete-btn:hover{
+    background:#16a34a;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+}
+
+/* ===========================
+   PART 3 - FILTERS & ANIMATIONS
+=========================== */
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:25px 0;
+}
+
+.filter-buttons button{
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    background:#334155;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active{
+    background:#0ea5e9;
+    transform:translateY(-3px);
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    padding:15px;
+    background:#0f172a;
+    border-radius:12px;
+    color:#cbd5e1;
+    font-size:15px;
+}
+
+.empty-message{
+    text-align:center;
+    color:#94a3b8;
+    margin-top:20px;
+    font-style:italic;
+}
+
+.fade-in{
+    animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+#task-list li{
+    animation:fadeIn .4s ease;
+}
+
+#task-list li.completed{
+    background:#1e293b;
+    opacity:.7;
+}
+
+#task-list li.completed span{
+    text-decoration:line-through;
+}
+
+.task-buttons button{
+    transition:0.3s;
+}
+
+.task-buttons button:hover{
+    transform:scale(1.08);
+}
+
+.todo-container{
+    animation:fadeIn .8s ease;
+}
+
+
+/* ===========================
+   PART 4 - RESPONSIVE & FINAL
+=========================== */
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .todo-container{
+        width:95%;
+        padding:20px;
+    }
+
+    .input-box{
+        flex-direction:column;
+    }
+
+    .input-box input,
+    .input-box button{
+        width:100%;
+    }
+
+    .filter-buttons{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .filter-buttons button{
+        width:100%;
+    }
+
+    #task-list li{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .task-buttons{
+        width:100%;
+        justify-content:flex-end;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+}
+
+@media (max-width:480px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .todo-container h2{
+        font-size:26px;
+    }
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#1e293b;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3b82f6;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#2563eb;
+}
+
+/* Button Hover */
+
+button{
+    transition:0.3s ease;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+/* Input Focus */
+
+input:focus{
+    outline:none;
+    border:2px solid #3b82f6;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    color:#cbd5e1;
+    padding:25px;
+    margin-top:30px;
+    font-size:14px;
+}
+
+/* End */
